@@ -47,6 +47,7 @@
     {"id":{"name":"sBoundaryVisual","path":"sprites/sBoundaryVisual/sBoundaryVisual.yy",},},
     {"id":{"name":"sCandle","path":"sprites/sCandle/sCandle.yy",},},
     {"id":{"name":"sPlayer","path":"sprites/sPlayer/sPlayer.yy",},},
+    {"id":{"name":"sWall","path":"sprites/sWall/sWall.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
