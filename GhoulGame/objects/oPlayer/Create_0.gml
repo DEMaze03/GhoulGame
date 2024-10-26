@@ -1,7 +1,13 @@
 hsp = 0;
 vsp = 0;
+
+hp = 1800;
+max_hp = 1800;
+
 state = "Ghoul";
 possessionTarget = noone;
 possessionTimer = 0;
-possessionTimerLimit = 300;
+possessionTimerLimit = 60;
+bound = noone;
+line = noone;
 testNum = 0;

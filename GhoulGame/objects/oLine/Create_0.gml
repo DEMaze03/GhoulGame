@@ -1,0 +1,2 @@
+origin = oPlayer;
+target = noone;
