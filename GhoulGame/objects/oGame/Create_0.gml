@@ -1,2 +1,2 @@
-candlesToLight = oCandle.instance_count;
+//candlesToLight = oCandle.instance_count;
 candlesLit = 0;

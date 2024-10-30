@@ -25,14 +25,23 @@ case "Ghoul":
 		instance_destroy(line);
 		bound = noone;
 		possessionTarget = possessable;
-		state = "Possessing";
-		possessable.possessed = true;
+		state = "Go To Possession Target";
+		
 	}
 	
 break;
 
+case "Go To Possession Target":
+	x = lerp(x, possessionTarget.x,0.06);
+	y = lerp(y, possessionTarget.y,0.06);
+	if place_meeting(x,y,possessionTarget){
+		possessionTarget.possessed = true;
+		state = "Possessing";
+	}
+break;
+
 case "Possessing":
-	hp = lerp(hp,max_hp,0.5);
+	hp = lerp(hp,max_hp,0.02);
 	if possessionTimer < possessionTimerLimit possessionTimer ++;
 	id.visible = false;
 	x = possessionTarget.x;
@@ -40,6 +49,7 @@ case "Possessing":
 	if (mcheck) && possessionTimer >= possessionTimerLimit {
 		state = "Ghoul";
 		possessionTarget.possessed = false;
+		possessionTarget.alarm[0] = room_speed*0.1;
 		id.visible = true;
 		vsp = -6;
 		possessionTarget = noone;
