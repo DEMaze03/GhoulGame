@@ -1,1 +1,0 @@
-audio_play_sound(snd_Eerie,1,true);

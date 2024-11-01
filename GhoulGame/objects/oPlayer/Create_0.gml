@@ -8,6 +8,6 @@ state = "Ghoul";
 possessionTarget = noone;
 possessionTimer = 0;
 possessionTimerLimit = 30;
-bound = noone;
+possessable = noone;
 line = noone;
 testNum = 0;

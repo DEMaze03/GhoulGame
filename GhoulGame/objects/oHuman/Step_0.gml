@@ -9,7 +9,7 @@ switch(possessed){
 					holding = nearestPump.id;
 					nearestPump.isHeld = true;
 					nearestPump.holdTarget = id;
-					holding = true;
+					
 				}else if nearestPump.isHeld != false && nearestPump.holdTarget != noone{
 					holding = noone;
 					nearestPump.hsp = round(hsp*2);
@@ -21,6 +21,12 @@ switch(possessed){
 	break;
 		
 	case false:
+	holding = noone;
 		calc_mov_human_normal();
 	break;
+}
+
+if x < 0 || y < 0 || x > 6000 || y > 6000{
+	x = startX;
+	y = startY;
 }

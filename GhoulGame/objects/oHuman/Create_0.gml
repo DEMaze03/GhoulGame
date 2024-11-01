@@ -5,3 +5,6 @@ facing = 1;
 holding = noone;
 nearestPump = noone;
 numJumps = 2;
+
+startX = x;
+startY = y;

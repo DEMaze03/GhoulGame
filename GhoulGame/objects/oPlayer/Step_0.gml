@@ -1,4 +1,4 @@
-	get_input();
+	if !instance_exists(o_fade) get_input();
 switch(state){
 case "Ghoul":
 	hp --;
@@ -7,7 +7,7 @@ case "Ghoul":
 	}
 	possessionTimer = 0;
 	calc_mov_ghost();
-	var possessable = getNearestPossession();
+	 possessable = getNearestPossession();
 	if possessable != noone{
 		draw_set_color(c_white);
 		draw_text(x,y,"Found target");
@@ -20,10 +20,8 @@ case "Ghoul":
 			line.target = possessable;
 		}
 	}
-	if(mcheck) && possessable != noone{
-		instance_destroy(bound);
+	if(mcheck) && possessable != noone{	
 		instance_destroy(line);
-		bound = noone;
 		possessionTarget = possessable;
 		state = "Go To Possession Target";
 		
@@ -57,6 +55,10 @@ case "Possessing":
 break;
 
 case "Dead":
-	id.visible = false;
+	sprite_index = sGhostDeath;
 break;
+}
+
+if instance_exists(oLine) && possessable == noone{
+	instance_destroy(oLine);
 }
