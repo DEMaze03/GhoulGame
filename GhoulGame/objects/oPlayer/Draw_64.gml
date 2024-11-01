@@ -1,1 +1,0 @@
-draw_text(80,80,round(hsp));
