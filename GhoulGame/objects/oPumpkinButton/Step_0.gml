@@ -12,8 +12,7 @@ if place_meeting(x,y-1,oPumpkin){
 	image_index = 0;
 }
 
-if collision_circle(x,y,100,oPlayer,false,true) != noone && !place_meeting(x,y,oButtonGoblin){
-	with instance_create_layer(x,y+104,"Instances",oButtonGoblin){
-		hint = other.rightFace;
-	}
+if collision_circle(x,y,100,oPlayer,false,true) != noone && !place_meeting(x,y,oButtonGoblin) && goblin == noone{
+	goblin = instance_create_layer(x,y+104,"WallObj",oButtonGoblin);
+		goblin.hint = rightFace;
 }

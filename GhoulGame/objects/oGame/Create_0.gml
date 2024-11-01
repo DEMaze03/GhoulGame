@@ -4,3 +4,6 @@ candlesLit = 0;
 panic = false;
 
 randomize();
+
+
+fullscr = true;

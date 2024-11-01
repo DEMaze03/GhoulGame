@@ -1,0 +1,1 @@
+if sprite_index = sCoinCollect instance_destroy();

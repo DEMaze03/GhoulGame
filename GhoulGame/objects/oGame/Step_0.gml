@@ -1,3 +1,10 @@
+if keyboard_check_pressed(vk_escape){
+	fullscr = !fullscr;
+	window_set_fullscreen(fullscr);
+}
+
+
+
 
 
 if instance_exists(oPlayer){

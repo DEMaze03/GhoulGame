@@ -1,1 +1,1 @@
-draw_text(10,10,possessable);
+draw_text(80,80,round(hsp));

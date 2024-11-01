@@ -2,8 +2,6 @@ origin = oPlayer;
 var xOrig = origin.x;
 var yOrig = origin.y;
 
-draw_text(x,y,xOrig);
-
 target = target;
 var xTarg = target.x;
 var yTarg = target.y;

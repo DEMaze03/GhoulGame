@@ -9,8 +9,6 @@ case "Ghoul":
 	calc_mov_ghost();
 	 possessable = getNearestPossession();
 	if possessable != noone{
-		draw_set_color(c_white);
-		draw_text(x,y,"Found target");
 		if testNum == 0 testNum++;
 		
 		if !instance_exists(oLine){
@@ -61,4 +59,25 @@ break;
 
 if instance_exists(oLine) && possessable == noone{
 	instance_destroy(oLine);
+}
+
+
+
+//Animation
+if round(hsp) > 0{
+	var facing = 1;
+	sprite_index = sPlayerSide;
+	image_xscale = facing;
+}else if round(hsp) < 0{
+	var facing = -1;
+	sprite_index = sPlayerSide;
+	image_xscale = facing;
+}else if round(hsp) == 1 || round(hsp) == -1 || round(hsp) == 0{
+	sprite_index = sPlayerIdle;
+}
+
+if round(vsp) < 0{
+	sprite_index = sPlayerUp;
+}else if round(vsp) > 0{
+	sprite_index = sPlayerDown;
 }
