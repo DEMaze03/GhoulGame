@@ -30,3 +30,24 @@ if x < 0 || y < 0 || x > 6000 || y > 6000{
 	x = startX;
 	y = startY;
 }
+
+
+
+if (round(hsp) == 1 || round(hsp) == -1 || round(hsp) == 0) && place_meeting(x,y+1,oWall){
+	sprite_index = sHumanIdle;
+}else if floor(hsp) > 0{
+	sprite_index = sHumanWalk;
+	image_xscale = 1;
+}else if floor(hsp) < 0{
+	sprite_index = sHumanWalk;
+	image_xscale = -1;
+}
+
+
+if floor(vsp) < -1{
+	sprite_index = sHumanJump;
+	image_index = 0;
+}else if floor(vsp) > 1{
+	sprite_index = sHumanJump;
+	image_index = 1;
+}

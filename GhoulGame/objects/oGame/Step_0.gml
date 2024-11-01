@@ -31,3 +31,8 @@ if instance_exists(oPlayer){
 	}
 	}
 }
+
+if room == Room4{
+	get_input();
+	if mcheck fade(rmTitle,60,c_black);
+}

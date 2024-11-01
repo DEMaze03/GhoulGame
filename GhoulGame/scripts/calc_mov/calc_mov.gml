@@ -19,6 +19,11 @@ function calc_mov_human_normal(){
 		hsp *= -1;
 	}
 	
+	if place_meeting(x, y+(vsp/4), oWall){
+		vsp = 0;
+		numJumps = 2;
+	}
+	
 	if !place_meeting(x,y+vsp, oWall) vsp += grv;
 	
 	
@@ -34,14 +39,14 @@ function calc_mov_human_poss(){
 	if !mrun hsp = lerp(hsp, (7*(right-left)),0.1);
 	if mrun hsp = lerp(hsp, (12*(right-left)),0.2);
 	
-	if mup && numJumps > 0{
+	if mjump && numJumps > 0{
 		vsp = -15;
 		numJumps --;
 	}
 	
 	vsp += grv;
 	
-	if place_meeting(x, y+(vsp/3), oWall){
+	if place_meeting(x, y+(vsp/4), oWall){
 		vsp = 0;
 		numJumps = 2;
 	}

@@ -13,7 +13,8 @@ function get_input(){
 	mright = keyboard_check_pressed(ord("D")) or keyboard_check_pressed(vk_right);
 	mup = keyboard_check_pressed(ord("W")) or keyboard_check_pressed(vk_up);
 	mdown = keyboard_check_pressed(ord("S")) or keyboard_check_pressed(vk_down);
-	mpickup = keyboard_check_pressed(ord("L")) or keyboard_check_pressed(ord("Z"));
+	mpickup = keyboard_check_pressed(ord("K")) or keyboard_check_pressed(ord("X"));
+	mjump = keyboard_check_pressed(ord("L")) or keyboard_check_pressed(ord("Z"));
 	mrun = keyboard_check(vk_shift);
 	mcheck = keyboard_check_pressed(vk_enter) or keyboard_check_pressed(ord("X"));
 	

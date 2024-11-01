@@ -1,2 +1,2 @@
 get_input();
-if mcheck fade(Room1,50,c_black);
+if mcheck fade(rmTutorial,50,c_black);

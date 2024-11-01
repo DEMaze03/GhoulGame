@@ -2,10 +2,14 @@ switch (possessed){
 	case true:
 	calc_mov_pumpkin();
 	get_input();
-	if mup face = 0;
-	if mdown face = 1;
-	if mleft face = 2;
-	if mright face = 3;
+	if mpickup{
+		if face == 0 face = 3;
+		else face --;
+	}
+	if mjump{
+		if face == 3 face = 0;
+		else face ++;
+	}
 	image_index = face;
 	break;
 	
@@ -14,8 +18,8 @@ switch (possessed){
 	else{
 		vsp = 0;
 		if holdTarget != noone{
-			x = holdTarget.x+(30*holdTarget.facing);
-			y = holdTarget.y;
+			x = holdTarget.x;
+			y = holdTarget.y-50;
 			
 			if holdTarget.possessed == false{
 				isHeld = false;

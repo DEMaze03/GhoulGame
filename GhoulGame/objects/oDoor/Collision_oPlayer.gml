@@ -1,5 +1,5 @@
 if state == "open" && !instance_exists(o_fade){
-	fade(Room2,60,c_purple);
+	fade(roomtoGoTo,60,c_purple);
 	if oPlayer.state == "Possessing"{
 	oPlayer.state = "Ghoul";
 		oPlayer.possessionTarget.possessed = false;
