@@ -8,3 +8,6 @@ numJumps = 2;
 
 startX = x;
 startY = y;
+
+hasAnimState = true;
+animState = "Idle";

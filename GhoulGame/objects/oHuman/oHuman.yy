@@ -36,12 +36,12 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sWall",
-    "path":"sprites/sWall/sWall.yy",
+    "name":"sHumanIdle",
+    "path":"sprites/sHumanIdle/sHumanIdle.yy",
   },
   "spriteMaskId":{
-    "name":"sWall",
-    "path":"sprites/sWall/sWall.yy",
+    "name":"sHumanIdle",
+    "path":"sprites/sHumanIdle/sHumanIdle.yy",
   },
   "visible":true,
 }

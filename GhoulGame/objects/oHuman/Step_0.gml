@@ -34,20 +34,45 @@ if x < 0 || y < 0 || x > 6000 || y > 6000{
 
 
 if (round(hsp) == 1 || round(hsp) == -1 || round(hsp) == 0) && place_meeting(x,y+1,oWall){
-	sprite_index = sHumanIdle;
+	animState = "Idle";
 }else if floor(hsp) > 0{
-	sprite_index = sHumanWalk;
-	image_xscale = 1;
+	animState = "Right";
 }else if floor(hsp) < 0{
-	sprite_index = sHumanWalk;
-	image_xscale = -1;
+	animState = "Left";
 }
 
 
 if floor(vsp) < -1{
+	animState = "UP";
+}else if floor(vsp) > 1{
+	animState = "Down";
+}
+
+if hsp > 0 image_xscale = 1;
+if hsp < 0 image_xscale = -1;
+
+switch animState{
+	case "Right":
+	sprite_index = sHumanWalk;
+	//image_xscale = 1;
+	break;
+	
+	case "Left":
+	sprite_index = sHumanWalk;
+	//image_xscale = -1;
+	break;
+	
+	case "UP":
 	sprite_index = sHumanJump;
 	image_index = 0;
-}else if floor(vsp) > 1{
+	break;
+	
+	case "Down":
 	sprite_index = sHumanJump;
 	image_index = 1;
+	break;
+	
+	case "Idle":
+	sprite_index = sHumanIdle;
+	break;
 }

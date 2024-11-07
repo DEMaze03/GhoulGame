@@ -16,4 +16,4 @@ for(var i = 0; distance_to_point(xTarg,yTarg) > (i * width); i++){
 	draw_sprite_ext(sprite_index, image_index, x + lengthdir_x(i*width,angle), y + lengthdir_y(i*width,angle),1,1,angle,image_blend,image_alpha);
 }
 
-draw_sprite(sBubble,image_index,xTarg,yTarg);
+draw_sprite_ext(sBubble_1,image_index,xTarg,yTarg,(target.sprite_width/64),(target.sprite_height/64),0,c_green,0.6);
